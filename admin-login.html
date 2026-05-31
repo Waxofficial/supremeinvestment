@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Settings - Supreme Live Investment</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0d1117;
+      color:white;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      position:fixed;
+      width:240px;
+      height:100%;
+      background:#161b22;
+      padding-top:30px;
+    }
+
+    .sidebar h2{
+      color:gold;
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .sidebar a{
+      display:block;
+      color:white;
+      text-decoration:none;
+      padding:15px 25px;
+      transition:0.3s;
+    }
+
+    .sidebar a:hover{
+      background:gold;
+      color:black;
+    }
+
+    /* MAIN */
+    .main{
+      margin-left:240px;
+      padding:30px;
+    }
+
+    h1{
+      color:gold;
+      margin-bottom:20px;
+    }
+
+    .section-box{
+      background:#161b22;
+      padding:25px;
+      border-radius:10px;
+      border:1px solid #333;
+      margin-bottom:30px;
+      max-width:700px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+
+    input, select{
+      width:100%;
+      padding:12px;
+      border-radius:6px;
+      border:1px solid #333;
+      background:#0d1117;
+      color:white;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      padding:12px 20px;
+      background:gold;
+      color:black;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      opacity:0.9;
+    }
+
+    @media(max-width:768px){
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+      }
+      .main{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-users.html">Manage Users</a>
+    <a href="admin-deposits.html">Deposit Requests</a>
+    <a href="admin-withdrawals.html">Withdrawal Requests</a>
+    <a href="admin-investments.html">Investments</a>
+    <a href="admin-settings.html" style="background:gold; color:black;">System Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>System Settings</h1>
+
+    <!-- CRYPTO WALLETS -->
+    <div class="section-box">
+      <h2 style="color:gold;">Crypto Wallet Addresses</h2>
+
+      <label>Bitcoin (BTC) Wallet</label>
+      <input type="text" placeholder="Enter BTC wallet address">
+
+      <label>Ethereum (ETH) Wallet</label>
+      <input type="text" placeholder="Enter ETH wallet address">
+
+      <label>USDT (TRC20) Wallet</label>
+      <input type="text" placeholder="Enter USDT TRC20 wallet address">
+    </div>
+
+    <!-- BANK DETAILS -->
+    <div class="section-box">
+      <h2 style="color:gold;">Bank Transfer Details</h2>
+
+      <label>Bank Name</label>
+      <input type="text" placeholder="Enter bank name">
+
+      <label>Account Name</label>
+      <input type="text" placeholder="Enter account name">
+
+      <label>Account Number</label>
+      <input type="text" placeholder="Enter account number">
+
+      <label>SWIFT Code</label>
+      <input type="text" placeholder="Enter SWIFT code">
+    </div>
+
+    <!-- COMMISSION SETTINGS -->
+    <div class="section-box">
+      <h2 style="color:gold;">Affiliate Commission</h2>
+
+      <label>Commission Rate (%)</label>
+      <input type="number" placeholder="e.g. 10">
+    </div>
+
+    <!-- MAINTENANCE MODE -->
+    <div class="section-box">
+      <h2 style="color:gold;">Maintenance Mode</h2>
+
+      <label>System Status</label>
+      <select>
+        <option value="online">Online (Users can access)</option>
+        <option value="maintenance">Maintenance Mode (Users see maintenance page)</option>
+      </select>
+    </div>
+
+    <!-- SAVE BUTTON -->
+    <button class="btn">Save Settings</button>
+
+  </div>
+
+</body>
+</html>
