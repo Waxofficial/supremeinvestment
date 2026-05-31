@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Withdrawals - Supreme Live Investment</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0d1117;
+      color:white;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      position:fixed;
+      width:240px;
+      height:100%;
+      background:#161b22;
+      padding-top:30px;
+    }
+
+    .sidebar h2{
+      color:gold;
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .sidebar a{
+      display:block;
+      color:white;
+      text-decoration:none;
+      padding:15px 25px;
+      transition:0.3s;
+    }
+
+    .sidebar a:hover{
+      background:gold;
+      color:black;
+    }
+
+    /* MAIN */
+    .main{
+      margin-left:240px;
+      padding:30px;
+    }
+
+    h1{
+      color:gold;
+      margin-bottom:20px;
+    }
+
+    .section-box{
+      background:#161b22;
+      padding:25px;
+      border-radius:10px;
+      border:1px solid #333;
+      margin-bottom:30px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+    }
+
+    table th, table td{
+      padding:15px;
+      border-bottom:1px solid #333;
+      text-align:left;
+    }
+
+    table th{
+      color:gold;
+    }
+
+    .btn{
+      padding:8px 15px;
+      background:gold;
+      color:black;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+      font-weight:bold;
+      margin-right:5px;
+    }
+
+    .btn-danger{
+      background:#ff4d4d;
+      color:white;
+    }
+
+    @media(max-width:768px){
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+      }
+      .main{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-users.html">Manage Users</a>
+    <a href="admin-deposits.html">Deposit Requests</a>
+    <a href="admin-withdrawals.html" style="background:gold; color:black;">Withdrawal Requests</a>
+    <a href="admin-investments.html">Investments</a>
+    <a href="admin-settings.html">System Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>Withdrawal Requests</h1>
+
+    <div class="section-box">
+      <h2 style="color:gold;">Pending Withdrawals</h2>
+
+      <table>
+        <tr>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Method</th>
+          <th>Wallet / Bank</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+
+        <tr>
+          <td>investPro</td>
+          <td>$300</td>
+          <td>USDT (TRC20)</td>
+          <td>TExampleTRC20WalletAddress54321</td>
+          <td>2026-05-28</td>
+          <td>
+            <button class="btn">Approve</button>
+            <button class="btn btn-danger">Reject</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>goldTrader</td>
+          <td>$900</td>
+          <td>Bank Transfer</td>
+          <td>Chase Bank - 0092847563</td>
+          <td>2026-05-27</td>
+          <td>
+            <button class="btn">Approve</button>
+            <button class="btn btn-danger">Reject</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>cryptoQueen</td>
+          <td>$1,500</td>
+          <td>BTC</td>
+          <td>bc1qexamplebtcwalletaddress12345</td>
+          <td>2026-05-26</td>
+          <td>
+            <button class="btn">Approve</button>
+            <button class="btn btn-danger">Reject</button>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="section-box">
+      <h2 style="color:gold;">Completed Withdrawals</h2>
+
+      <table>
+        <tr>
+          <th>User</th>
+          <th>Amount</th>
+          <th>Method</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+
+        <tr>
+          <td>john_doe</td>
+          <td>$250</td>
+          <td>USDT</td>
+          <td style="color:lightgreen;">Approved</td>
+          <td>2026-05-20</td>
+        </tr>
+
+        <tr>
+          <td>eliteInvestor</td>
+          <td>$700</td>
+          <td>Bank Transfer</td>
+          <td style="color:lightgreen;">Approved</td>
+          <td>2026-05-18</td>
+        </tr>
+
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile - Supreme Live Investment</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#0d1117;color:white;}
+    .sidebar{position:fixed;width:220px;height:100%;background:#161b22;padding-top:30px;}
+    .sidebar h2{text-align:center;color:gold;margin-bottom:40px;}
+    .sidebar a{display:block;color:white;text-decoration:none;padding:15px 25px;transition:0.3s;}
+    .sidebar a:hover{background:gold;color:black;}
+    .main{margin-left:220px;padding:30px;}
+    h1{color:gold;margin-bottom:25px;}
+    .card{background:#161b22;padding:25px;border-radius:10px;max-width:500px;}
+    label{display:block;margin-top:15px;font-weight:bold;color:gold;}
+    input{width:100%;padding:12px;margin-top:8px;border-radius:5px;border:1px solid #333;background:#0d1117;color:white;}
+    .btn{margin-top:20px;padding:12px;width:100%;background:gold;color:black;border:none;border-radius:5px;font-weight:bold;cursor:pointer;}
+    .btn:hover{background:#d4af37;}
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h2>Supreme Investment</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="withdraw.html">Withdraw</a>
+    <a href="profile.html">Profile</a>
+    <a href="logout.html">Logout</a>
+  </div>
+  <div class="main">
+    <h1>Your Profile</h1>
+
+    <div class="card">
+      <label>Full Name</label>
+      <input type="text" value="Fred">
+
+      <label>Email</label>
+      <input type="email" value="example@email.com">
+
+      <label>Password</label>
+      <input type="password" placeholder="Change password">
+
+      <button class="btn">Update Profile</button>
+    </div>
+  </div>
+
+</body>
+</html>

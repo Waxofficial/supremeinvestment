@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Supreme lives investment</title>
+  <style>
+    body {
+      background: #0d1117;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 250px;
+    }
+
+    button {
+      padding: 10px 30px;
+      background: gold;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Login</h2>
+
+  <input type="email" placeholder="Email">
+  <input type="password" placeholder="Password">
+
+  <button type="button" onclick="loginUser()">
+  Login
+</button>
+
+<script>
+function loginUser() {
+  let email = document.querySelector("input[type='email']").value;
+
+  localStorage.setItem("userEmail", email);
+
+  window.location.href = "dashboard.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit - Supreme Live Investment</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0d1117;
+      color:white;
+    }
+
+    .sidebar{
+      position:fixed;
+      width:220px;
+      height:100%;
+      background:#161b22;
+      padding-top:30px;
+    }
+
+    .sidebar h2{
+      color:gold;
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .sidebar a{
+      display:block;
+      color:white;
+      text-decoration:none;
+      padding:15px 25px;
+      transition:0.3s;
+    }
+
+    .sidebar a:hover{
+      background:gold;
+      color:black;
+    }
+
+    .main{
+      margin-left:220px;
+      padding:30px;
+    }
+
+    h1{
+      color:gold;
+      margin-bottom:20px;
+    }
+
+    .deposit-box{
+      background:#161b22;
+      padding:25px;
+      border-radius:10px;
+      border:1px solid #333;
+      max-width:550px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+
+    input, select{
+      width:100%;
+      padding:12px;
+      border-radius:6px;
+      border:1px solid #333;
+      background:#0d1117;
+      color:white;
+      margin-bottom:20px;
+    }
+
+    .wallet-box, .bank-box, .card-box{
+      background:#0d1117;
+      padding:15px;
+      border-radius:8px;
+      border:1px solid #333;
+      margin-top:10px;
+      display:none;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      background:gold;
+      color:black;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+      cursor:pointer;
+      border:none;
+    }
+
+    .btn:hover{
+      opacity:0.9;
+    }
+
+    @media(max-width:768px){
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+      }
+      .main{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Supreme</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="withdraw.html">Withdraw</a>
+    <a href="investment-plans.html">Investment Plans</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="settings.html">Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>Make a Deposit</h1>
+
+    <div class="deposit-box">
+
+      <label>Deposit Amount ($)</label>
+      <input type="number" id="amount" placeholder="Enter amount" min="10">
+
+      <label>Select Payment Method</label>
+      <select id="method">
+        <option value="">Choose Method</option>
+        <option value="btc">Bitcoin (BTC)</option>
+        <option value="eth">Ethereum (ETH)</option>
+        <option value="usdt">USDT (TRC20)</option>
+        <option value="bank">Bank Transfer</option>
+        <option value="card">Credit / Debit Card</option>
+      </select>
+
+      <button class="btn" onclick="showPayment()">Proceed</button>
+
+      <!-- CRYPTO WALLET -->
+      <div class="wallet-box" id="walletBox">
+        <h3 style="color:gold; margin-bottom:10px;">Send Crypto To:</h3>
+        <p id="walletAddress"></p>
+        <button class="btn" onclick="copyWallet()">Copy Address</button>
+      </div>
+
+      <!-- BANK TRANSFER -->
+      <div class="bank-box" id="bankBox">
+        <h3 style="color:gold; margin-bottom:10px;">Bank Deposit Details</h3>
+
+        <p><strong>Bank Name:</strong> Supreme Global Bank</p>
+        <p><strong>Account Name:</strong> Supreme Live Investment</p>
+        <p><strong>Account Number:</strong> 0092847563</p>
+        <p><strong>SWIFT Code:</strong> SUPRUS33</p>
+
+        <label>Select Your Country</label>
+        <select>
+          <option>Nigeria</option>
+          <option>Ghana</option>
+          <option>Kenya</option>
+          <option>South Africa</option>
+          <option>United States</option>
+          <option>United Kingdom</option>
+          <option>Canada</option>
+          <option>Germany</option>
+          <option>France</option>
+          <option>Italy</option>
+          <option>Spain</option>
+          <option>Brazil</option>
+          <option>Mexico</option>
+          <option>India</option>
+          <option>China</option>
+          <option>Japan</option>
+          <option>UAE</option>
+          <option>Saudi Arabia</option>
+          <option>Turkey</option>
+          <option>Netherlands</option>
+          <option>Sweden</option>
+          <option>Norway</option>
+          <option>Poland</option>
+          <option>Egypt</option>
+          <option>Morocco</option>
+          <option>Argentina</option>
+          <option>Chile</option>
+          <option>Australia</option>
+          <option>New Zealand</option>
+          <option>Singapore</option>
+        </select>
+
+        <button class="btn">I Have Made The Transfer</button>
+      </div>
+
+      <!-- CARD PAYMENT -->
+      <div class="card-box" id="cardBox">
+        <h3 style="color:gold; margin-bottom:10px;">Card Payment</h3>
+
+        <label>Card Number</label>
+        <input type="text" placeholder="1234 5678 9012 3456">
+
+        <label>Expiry Date</label>
+        <input type="text" placeholder="MM/YY">
+
+        <label>CVV</label>
+        <input type="text" placeholder="123">
+
+        <button class="btn">Pay Now</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function showPayment(){
+      const method = document.getElementById("method").value;
+
+      document.getElementById("walletBox").style.display = "none";
+      document.getElementById("bankBox").style.display = "none";
+      document.getElementById("cardBox").style.display = "none";
+
+      if(method === ""){
+        alert("Please select a payment method");
+        return;
+      }
+
+      if(method === "btc" || method === "eth" || method === "usdt"){
+        const wallets = {
+          btc: "bc1qexamplebtcwalletaddress12345",
+          eth: "0xExampleEthereumWalletAddress67890",
+          usdt: "TExampleTRC20WalletAddress54321"
+        };
+
+        document.getElementById("walletAddress").textContent = wallets[method];
+        document.getElementById("walletBox").style.display = "block";
+      }
+
+      if(method === "bank"){
+        document.getElementById("bankBox").style.display = "block";
+      }
+
+      if(method === "card"){
+        document.getElementById("cardBox").style.display = "block";
+      }
+    }
+
+    function copyWallet(){
+      const text = document.getElementById("walletAddress").textContent;
+      navigator.clipboard.writeText(text);
+      alert("Wallet address copied!");
+    }
+  </script>
+
+</body>
+</html>

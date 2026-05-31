@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transaction History - Supreme Live Investment</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#0d1117;color:white;}
+    .sidebar{position:fixed;width:220px;height:100%;background:#161b22;padding-top:30px;}
+    .sidebar h2{text-align:center;color:gold;margin-bottom:40px;}
+    .sidebar a{display:block;color:white;text-decoration:none;padding:15px 25px;transition:0.3s;}
+    .sidebar a:hover{background:gold;color:black;}
+    .main{margin-left:220px;padding:30px;}
+    h1{color:gold;margin-bottom:25px;}
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:#161b22;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    th, td{
+      padding:15px;
+      border-bottom:1px solid #333;
+    }
+
+    th{
+      color:gold;
+      background:#1c2128;
+    }
+
+    tr:hover{
+      background:#1a1f26;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <h2>Supreme Investment</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="withdraw.html">Withdraw</a>
+    <a href="transaction-history.html">Transactions</a>
+    <a href="profile.html">Profile</a>
+    <a href="settings.html">Settings</a>
+    <a href="logout.html">Logout</a>
+  </div>
+
+  <div class="main">
+    <h1>Transaction History</h1>
+
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>2026-05-20</td>
+        <td>Deposit</td>
+        <td>$500</td>
+        <td style="color:gold;">Completed</td>
+      </tr>
+
+      <tr>
+        <td>2026-05-22</td>
+        <td>Withdrawal</td>
+        <td>$200</td>
+        <td style="color:orange;">Pending</td>
+      </tr>
+
+    </table>
+  </div>
+
+</body>
+</html>

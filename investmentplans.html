@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investment Plans - Supreme Live Investment</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0d1117;
+      color:white;
+    }
+
+    .sidebar{
+      position:fixed;
+      width:220px;
+      height:100%;
+      background:#161b22;
+      padding-top:30px;
+    }
+
+    .sidebar h2{
+      color:gold;
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .sidebar a{
+      display:block;
+      color:white;
+      text-decoration:none;
+      padding:15px 25px;
+      transition:0.3s;
+    }
+
+    .sidebar a:hover{
+      background:gold;
+      color:black;
+    }
+
+    .main{
+      margin-left:220px;
+      padding:30px;
+    }
+
+    h1{
+      color:gold;
+      margin-bottom:20px;
+    }
+
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .plan-card{
+      background:#161b22;
+      padding:25px;
+      border-radius:10px;
+      border:1px solid #333;
+    }
+
+    .plan-card h2{
+      color:gold;
+      margin-bottom:10px;
+    }
+
+    .plan-card p{
+      margin-bottom:10px;
+      color:#ccc;
+    }
+
+    .plan-card ul{
+      margin:10px 0;
+      padding-left:20px;
+    }
+
+    .plan-card ul li{
+      margin-bottom:6px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 20px;
+      background:gold;
+      color:black;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+    }
+
+    @media(max-width:768px){
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+      }
+      .main{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Supreme</h2>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="deposit.html">Deposit</a>
+    <a href="withdraw.html">Withdraw</a>
+    <a href="investmentplans.html" style="background:gold; color:black;">Investment Plans</a>
+    <a href="affiliate.html">Affiliate</a>
+    <a href="settings.html">Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>Investment Plans</h1>
+
+    <div class="plans">
+
+      <!-- Starter Plan -->
+      <div class="plan-card">
+        <h2>Starter Plan</h2>
+        <p><strong>Amount:</strong> $100 – $499</p>
+        <p><strong>ROI:</strong> 8% after 7 days</p>
+
+        <ul>
+          <li>Low entry level</li>
+          <li>Capital + profit at maturity</li>
+          <li>24/7 dashboard tracking</li>
+        </ul>
+
+        <a href="create-investment.html?plan=starter" class="btn">Invest Now</a>
+      </div>
+
+      <!-- Classic Plan -->
+      <div class="plan-card">
+        <h2>Classic Plan</h2>
+        <p><strong>Amount:</strong> $500 – $4,999</p>
+        <p><strong>ROI:</strong> 15% after 14 days</p>
+
+        <ul>
+          <li>Higher profit margin</li>
+          <li>Capital secured</li>
+          <li>Instant reinvest option</li>
+        </ul>
+
+        <a href="create-investment.html?plan=classic" class="btn">Invest Now</a>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="plan-card">
+        <h2>Premium Plan</h2>
+        <p><strong>Amount:</strong> $5,000 – $24,999</p>
+        <p><strong>ROI:</strong> 25% after 21 days</p>
+
+        <ul>
+          <li>Priority support</li>
+          <li>Dedicated account manager</li>
+          <li>Early access to new products</li>
+        </ul>
+
+        <a href="create-investment.html?plan=premium" class="btn">Invest Now</a>
+      </div>
+
+      <!-- Supreme Plan -->
+      <div class="plan-card">
+        <h2>Supreme Plan</h2>
+        <p><strong>Amount:</strong> $25,000+</p>
+        <p><strong>ROI:</strong> Custom</p>
+
+        <ul>
+          <li>Custom ROI & duration</li>
+          <li>Advanced risk management</li>
+          <li>Direct line to investment team</li>
+        </ul>
+
+        <a href="contact-manager.html" class="btn">Contact Manager</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
