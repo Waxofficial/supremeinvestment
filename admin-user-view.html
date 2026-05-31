@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin User Profile - Supreme Live Investment</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#0d1117;color:white;}
+    .sidebar{position:fixed;width:240px;height:100%;background:#161b22;padding-top:30px;}
+    .sidebar h2{color:gold;text-align:center;margin-bottom:40px;}
+    .sidebar a{display:block;color:white;text-decoration:none;padding:15px 25px;transition:0.3s;}
+    .sidebar a:hover{background:gold;color:black;}
+    .main{margin-left:240px;padding:30px;}
+    h1{color:gold;margin-bottom:20px;}
+    .section-box{background:#161b22;padding:25px;border-radius:10px;border:1px solid #333;margin-bottom:30px;max-width:800px;}
+    .row{display:flex;justify-content:space-between;margin-bottom:8px;}
+    .label{color:#a0aec0;}
+    .value{font-weight:bold;}
+    table{width:100%;border-collapse:collapse;margin-top:15px;}
+    table th,table td{padding:10px;border-bottom:1px solid #333;text-align:left;}
+    table th{color:gold;}
+    .btn{padding:8px 15px;background:gold;color:black;border:none;border-radius:5px;cursor:pointer;font-weight:bold;margin-right:5px;margin-top:10px;}
+    .btn-danger{background:#ff4d4d;color:white;}
+    @media(max-width:768px){.sidebar{width:100%;height:auto;position:relative;}.main{margin-left:0;}.row{flex-direction:column;}}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-users.html" style="background:gold;color:black;">Manage Users</a>
+    <a href="admin-deposits.html">Deposit Requests</a>
+    <a href="admin-withdrawals.html">Withdrawal Requests</a>
+    <a href="admin-investments.html">Investments</a>
+    <a href="admin-settings.html">System Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <div class="main">
+    <h1>User Profile</h1>
+
+    <div class="section-box">
+      <div class="row"><span class="label">User ID:</span><span class="value">#1021</span></div>
+      <div class="row"><span class="label">Name:</span><span class="value">John Doe</span></div>
+      <div class="row"><span class="label">Email:</span><span class="value">john@example.com</span></div>
+      <div class="row"><span class="label">Status:</span><span class="value" style="color:lightgreen;">Active</span></div>
+      <div class="row"><span class="label">Total Balance:</span><span class="value">$1,200</span></div>
+      <div class="row"><span class="label">Total Deposits:</span><span class="value">$3,000</span></div>
+      <div class="row"><span class="label">Total Withdrawals:</span><span class="value">$1,800</span></div>
+
+      <button class="btn">Suspend User</button>
+      <button class="btn btn-danger">Delete User</button>
+    </div>
+
+    <div class="section-box">
+      <h2 style="color:gold;margin-bottom:10px;">Recent Investments</h2>
+      <table>
+        <tr>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>ROI</th>
+          <th>Status</th>
+          <th>Start</th>
+          <th>End</th>
+        </tr>
+        <tr>
+          <td>Classic</td>
+          <td>$1,000</td>
+          <td>15%</td>
+          <td style="color:lightgreen;">Running</td>
+          <td>2026-05-20</td>
+          <td>2026-06-03</td>
+        </tr>
+        <tr>
+          <td>Starter</td>
+          <td>$300</td>
+          <td>8%</td>
+          <td style="color:#63b3ed;">Completed</td>
+          <td>2026-05-01</td>
+          <td>2026-05-08</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

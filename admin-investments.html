@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Investments - Supreme Live Investment</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+    body{background:#0d1117;color:white;}
+    .sidebar{position:fixed;width:240px;height:100%;background:#161b22;padding-top:30px;}
+    .sidebar h2{color:gold;text-align:center;margin-bottom:40px;}
+    .sidebar a{display:block;color:white;text-decoration:none;padding:15px 25px;transition:0.3s;}
+    .sidebar a:hover{background:gold;color:black;}
+    .main{margin-left:240px;padding:30px;}
+    h1{color:gold;margin-bottom:20px;}
+    .section-box{background:#161b22;padding:25px;border-radius:10px;border:1px solid:#333;margin-bottom:30px;}
+    table{width:100%;border-collapse:collapse;margin-top:20px;}
+    table th,table td{padding:15px;border-bottom:1px solid #333;text-align:left;}
+    table th{color:gold;}
+    .btn{padding:8px 15px;background:gold;color:black;border:none;border-radius:5px;cursor:pointer;font-weight:bold;margin-right:5px;}
+    .status-running{color:lightgreen;font-weight:bold;}
+    .status-completed{color:#63b3ed;font-weight:bold;}
+    .status-cancelled{color:#ff4d4d;font-weight:bold;}
+    @media(max-width:768px){.sidebar{width:100%;height:auto;position:relative;}.main{margin-left:0;}}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-user.html">Manage_User</a>
+    <a href="admin-deposits.html">Deposit_Requests</a>
+    <a href="admin-withdrawal.html">Withdrawal_Requests</a>
+    <a href="admin-investment.html">Investment</a>
+    <a href="admin-settings.html">System Settings</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <div class="main">
+    <h1>Investments</h1>
+
+    <div class="section-box">
+      <h2 style="color:gold;">Active Investments</h2>
+      <table>
+        <tr>
+          <th>User</th>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>ROI</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>armstrong_sunday</td>
+          <td>Classic</td>
+          <td>$1,000</td>
+          <td>15% / 14 days</td>
+          <td>2026-05-20</td>
+          <td>2026-06-03</td>
+          <td class="status-running">Running</td>
+        </tr>
+        <tr>
+          <td>elom musk</td>
+          <td>Premium</td>
+          <td>$5,000</td>
+          <td>25% / 21 days</td>
+          <td>2026-05-18</td>
+          <td>2026-06-08</td>
+          <td class="status-running">Running</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section-box">
+      <h2 style="color:gold;">Completed / Closed Investments</h2>
+      <table>
+        <tr>
+          <th>User</th>
+          <th>Plan</th>
+          <th>Amount</th>
+          <th>Profit Paid</th>
+          <th>Status</th>
+          <th>Closed On</th>
+        </tr>
+        <tr>
+          <td>investPro</td>
+          <td>Starter</td>
+          <td>$300</td>
+          <td>$24</td>
+          <td class="status-completed">Completed</td>
+          <td>2026-05-10</td>
+        </tr>
+        <tr>
+          <td>goldTrader</td>
+          <td>Supreme</td>
+          <td>$25,000</td>
+          <td>$6,000</td>
+          <td class="status-completed">Completed</td>
+          <td>2026-05-01</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
